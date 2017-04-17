@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Final step') {
       steps {
-        build 'tuan'
+        echo 'Final!!'
       }
     }
   }
