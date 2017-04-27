@@ -3,16 +3,7 @@ pipeline {
   stages {
     stage('Getting Started') {
       steps {
-        parallel(
-          "Getting Started": {
-            echo 'Hello Pipeline'
-            
-          },
-          "Stage 2 concurrent": {
-            echo 'concurrent'
-            
-          }
-        )
+        git(url: 'git@github.com:nsone/platform.git', branch: 'develop')
       }
     }
     stage('Final step') {
