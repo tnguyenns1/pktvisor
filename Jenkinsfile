@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Getting Started') {
       steps {
-        git(url: 'git@github.com:nsone/platform.git', branch: 'develop')
+        git(url: 'git@github.com:nsone/platform.git', branch: 'develop', credentialsId: 'jenkins')
       }
     }
     stage('Final step') {
